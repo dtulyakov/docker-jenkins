@@ -3,7 +3,7 @@ FROM jenkins
 USER root
 
 RUN set -x \
-  && apt-get update -q \
+  && apt-get update -qq \
   && apt-get install --no-install-recommends -qy \
      software-properties-common \
      python-requests \
@@ -20,7 +20,7 @@ RUN set -x \
   && add-apt-repository 'deb [arch=amd64] https://download.docker.com/linux/debian stretch stable' \
   && apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 93C4A3FD7BB9C367 \
   && apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 7EA0A9C3F273FCD8 \
-  && apt-get update -q \
+  && apt-get update -qq \
   && apt-get install -qy ansible docker-ce \
   && apt-get autoremove -y \
   && usermod -aG docker jenkins \
