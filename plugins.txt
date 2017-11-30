@@ -1,4 +1,4 @@
-scm-api:latest
-git-client:latest
-git:latest
 greenballs:latest
+ansicolor:latest
+rebuild:latest
+build-with-parameters:latest
