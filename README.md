@@ -1,4 +1,7 @@
 [![Build Status](https://travis-ci.org/dtulyakov/docker-jenkins.svg?branch=master)](https://travis-ci.org/dtulyakov/docker-jenkins)
+[![Docker Pulls](https://img.shields.io/docker/pulls/dtulyakov/jenkins.svg)][hub]
+
+[hub]: https://hub.docker.com/r/dtulyakov/jenkins/
 
 ```BASH
 docker build --force-rm --no-cache --tag=dtulyakov/jenkins:latest . \
