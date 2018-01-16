@@ -13,6 +13,7 @@ RUN set -x \
      ca-certificates \
      curl \
      gnupg2 \
+     rsync \
   && pip3 install pip --upgrade \
   && pip3 install pep8 \
      pylint \
