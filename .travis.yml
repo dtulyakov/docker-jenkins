@@ -23,8 +23,8 @@ before_install:
 script:
 - date
 
-#after_success:
-  #- if [ "$TRAVIS_BRANCH" == "master" ]; then
-    #docker login -e="$DOCKER_EMAIL" -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD";
-    #docker push dtulyakov/jenkins:latest;
-    #fi
+after_success:
+  - if [ "$TRAVIS_BRANCH" == "master" ]; then
+    docker login -e="$DOCKER_EMAIL" -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD";
+    #docker pull dtulyakov/jenkins:latest;
+    fi
