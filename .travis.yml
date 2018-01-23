@@ -16,8 +16,7 @@ services:
   - docker
 
 before_install:
-- sleep 900
-- docker pull dtulyakov/jenkins:latest
+- docker build dtulyakov/jenkins:latest .
 - docker run -d dtulyakov/jenkins:latest
 - docker ps -a
 
