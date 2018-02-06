@@ -2,3 +2,5 @@ greenballs:latest
 ansicolor:latest
 rebuild:latest
 build-with-parameters:latest
+disk-usage:latest
+embeddable-build-status:latest
