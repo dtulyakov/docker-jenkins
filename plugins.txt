@@ -4,4 +4,9 @@ rebuild:latest
 build-with-parameters:latest
 disk-usage:latest
 embeddable-build-status:latest
+ansible:latest
 blueocean:latest
+xunit:latest
+parameterized-trigger:latest
+simple-theme-plugin:latest
+
