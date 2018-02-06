@@ -4,3 +4,4 @@ rebuild:latest
 build-with-parameters:latest
 disk-usage:latest
 embeddable-build-status:latest
+delivery-pipeline-plugin:latest
