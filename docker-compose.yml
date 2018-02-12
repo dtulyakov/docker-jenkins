@@ -12,9 +12,19 @@ services:
          - /usr/bin/docker:/usr/bin/docker
          - jenkins_home:/var/jenkins_home
      restart: unless-stopped
-     ports:
-         - 8080:8080
-         - 50000:50000
+     network_mode: host
+     #ports:
+         #- 8080:8080
+         #- 50000:50000
+
+  nginx:
+     image: nginx:alpine
+     container_name: Nginx
+     env_file: .env
+     volumes:
+         - ./data/nginx/jenkins.conf:/etc/nginx/conf.d/jenkins.conf
+         - ./data/nginx/ssl:/etc/nginx/ssl:ro
+     restart: unless-stopped
      network_mode: host
 
 volumes:
