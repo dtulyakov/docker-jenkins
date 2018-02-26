@@ -9,6 +9,8 @@ RUN set -x \
      python-requests \
      python3-pip \
      python3-setuptools \
+     ruby \
+     ruby-dev \
      apt-transport-https \
      ca-certificates \
      curl \
