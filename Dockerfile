@@ -14,6 +14,8 @@ RUN set -x \
      curl \
      gnupg2 \
      rsync \
+     ruby \
+     ruby-dev \
   && pip3 install pip --upgrade \
   && pip3 install pep8 \
      pylint \
@@ -40,7 +42,3 @@ RUN /usr/local/bin/install-plugins.sh < /usr/share/jenkins/ref/plugins.txt
 # Если надо поиграться с судо
 # RUN apt-get install -y sudo
 # RUN echo "jenkins ALL=NOPASSWD: ALL" >> /etc/sudoers
-#
-#     ruby \
-#     ruby-dev \
-

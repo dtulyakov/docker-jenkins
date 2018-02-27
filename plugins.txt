@@ -9,5 +9,5 @@ blueocean:latest
 xunit:latest
 parameterized-trigger:latest
 simple-theme-plugin:latest
-#python:latest
-#cucumber:latest
+python:latest
+cucumber:latest
