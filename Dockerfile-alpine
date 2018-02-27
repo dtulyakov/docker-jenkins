@@ -1,8 +1,15 @@
-FROM jenkins:alpine
+FROM jenkins/jenkins:alpine
 
 USER root
 
-RUN set -x \
+#ONBUILD RUN set -x \
+#  && apk add -q --update --clean-protected --no-cache \
+#    g++ \
+#    && rm /var/cache/apk/*
+#
+#
+#
+#RUN set -x \
 #  && apt-get update -qq \
 #  && apt-get install --no-install-recommends -qy \
 #     software-properties-common \
@@ -26,10 +33,10 @@ RUN set -x \
 #  && usermod -aG docker jenkins \
 #  && rm -fr /var/lib/apt/lists/* /tmp/* /var/tmp/* /var/cache/apt/archives/*
 
-#USER jenkins
+USER jenkins
 
-#COPY plugins.txt /usr/share/jenkins/ref/plugins.txt
-#RUN /usr/local/bin/install-plugins.sh < /usr/share/jenkins/ref/plugins.txt
+COPY plugins.txt /usr/share/jenkins/ref/plugins.txt
+RUN /usr/local/bin/install-plugins.sh < /usr/share/jenkins/ref/plugins.txt
 
 # Вообще всё это можно поставить на агентах и не трогать основной образ ;)
 # Пример запуска `pylint somefile.py`
