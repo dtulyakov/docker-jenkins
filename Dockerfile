@@ -9,8 +9,6 @@ RUN set -x \
      python-requests \
      python3-pip \
      python3-setuptools \
-     ruby \
-     ruby-dev \
      apt-transport-https \
      ca-certificates \
      curl \
@@ -42,5 +40,7 @@ RUN /usr/local/bin/install-plugins.sh < /usr/share/jenkins/ref/plugins.txt
 # Если надо поиграться с судо
 # RUN apt-get install -y sudo
 # RUN echo "jenkins ALL=NOPASSWD: ALL" >> /etc/sudoers
-
+#
+#     ruby \
+#     ruby-dev \
 
