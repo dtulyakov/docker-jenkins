@@ -2,6 +2,15 @@ FROM jenkins/jenkins:alpine
 
 USER root
 
+RUN set -x \
+  && apk add -q --update --clean-protected --no-cache \
+    bash \
+    docker \
+    python \
+    python-dev \
+    py-pip \
+    && rm /var/cache/apk/*
+
 #ONBUILD RUN set -x \
 #  && apk add -q --update --clean-protected --no-cache \
 #    g++ \
