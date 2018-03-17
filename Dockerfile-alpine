@@ -9,6 +9,7 @@ RUN set -x \
     python \
     python-dev \
     py-pip \
+    curl \
     && rm /var/cache/apk/*
 
 #ONBUILD RUN set -x \
