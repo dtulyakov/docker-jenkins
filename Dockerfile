@@ -19,6 +19,8 @@ RUN set -x \
   && pip3 install pip --upgrade \
   && pip3 install pep8 \
      pylint \
+     pytest \
+     pytest-cov \
   && apt-add-repository 'deb http://ppa.launchpad.net/ansible/ansible/ubuntu trusty main' \
   && add-apt-repository 'deb [arch=amd64] https://download.docker.com/linux/debian stretch stable' \
   && apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 93C4A3FD7BB9C367 \

@@ -9,9 +9,9 @@ docker build --force-rm --no-cache --tag=dtulyakov/jenkins:latest . \
      --network=host \
      --name=Jenkins \
      --env=TRY_UPGRADE_IF_NO_MARKER=true \
-     --volumes-from=$(readlink -f /var/run/docker.sock):$(readlink -f /var/run/docker.sock) \
-     --volumes-from=$(which docker):$(which docker) \
-     --volumes-from=jenkins_home:/var/jenkins_home \
+     -v $(readlink -f /var/run/docker.sock):$(readlink -f /var/run/docker.sock) \
+     -v $(which docker):$(which docker) \
+     -v jenkins_home:/var/jenkins_home \
      dtulyakov/jenkins \
   && docker start Jenkins
 

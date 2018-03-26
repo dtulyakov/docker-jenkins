@@ -11,3 +11,4 @@ parameterized-trigger:latest
 simple-theme-plugin:latest
 python:latest
 cucumber:latest
+cobertura:latest
