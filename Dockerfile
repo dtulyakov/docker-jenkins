@@ -17,7 +17,7 @@ RUN set -x \
      ruby \
      ruby-dev \
   && pip3 install pip --upgrade \
-  && pip3 install pep8 \
+  && pip install pep8 \
      pylint \
      pytest \
      pytest-cov \
