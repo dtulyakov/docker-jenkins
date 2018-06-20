@@ -3,6 +3,7 @@ ansicolor:latest
 rebuild:latest
 build-with-parameters:latest
 disk-usage:latest
+docker-build-step:latest
 embeddable-build-status:latest
 ansible:latest
 blueocean:latest
