@@ -23,8 +23,8 @@ RUN set -x \
      pytest-cov \
   && apt-add-repository 'deb http://ppa.launchpad.net/ansible/ansible/ubuntu trusty main' \
   && add-apt-repository 'deb [arch=amd64] https://download.docker.com/linux/debian stretch stable' \
-  && apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 93C4A3FD7BB9C367 \
-  && apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 7EA0A9C3F273FCD8 \
+  && apt-key adv --no-tty --keyserver keyserver.ubuntu.com --recv-keys 93C4A3FD7BB9C367 \
+  && apt-key adv --no-tty --keyserver keyserver.ubuntu.com --recv-keys 7EA0A9C3F273FCD8 \
   && apt-get update -qq \
   && apt-get install -qy ansible docker-ce \
   && apt-get autoremove -y \
