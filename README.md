@@ -30,3 +30,4 @@ curl -sSL "http://$JENKINS_HOST/pluginManager/api/xml?depth=1&xpath=/*/*/shortNa
 - xunit
 - parameterized-trigger
 - simple-theme-plugin
+
